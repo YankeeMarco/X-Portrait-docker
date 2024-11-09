@@ -54,6 +54,13 @@ parameters:
 **num_mix**: number of overlapping frames when applying prompt travelling during inference  
 **ddim_steps**: number of inference steps (e.g., 30 steps for ddim)     
 
+## Docker containers
+
+Please note that this repository employs a temporary solution for handling model files. We recommend that you customize this approach to suit your needs, potentially by mounting external volumes containing the actual model files. In this context, we are treating the Docker image as an independent function to facilitate easier deployment.
+
+```
+
+```
 ## Performance Boost
 **efficiency**: Our model is compatible with LCM LoRA (https://huggingface.co/latent-consistency/lcm-lora-sdv1-5), which helps reduce the number of inference steps.  
 **expressiveness**: Expressiveness of the results could be boosted if results of other face reenactment approaches, e.g., face vid2vid, could be provided via parameter "--initial_facevid2vid_results".  
